@@ -1,0 +1,124 @@
+{
+  "spawn": {
+    "image": [0, 0, 640, 640],
+    "progression": [true, false, false, false],
+    "next_levels": ["after_spawn", null, null, null],
+    "enemies": [],
+    "elements": [],
+    "spawn_point": [[], [], [300, 100], [100, 500]],
+    "bounding_boxes": [
+      { "loc": [355, 628], "name": "tree_cactus_s" },
+      { "loc": [375, 622], "name": "tree_cactus_l" },
+      { "loc": [432, 574], "name": "tree_cactus_l" },
+      { "loc": [470, 516], "name": "round_cactus_s" },
+      { "loc": [480, 498], "name": "tree_cactus_s" },
+      { "loc": [510, 488], "name": "round_cactus_s" },
+      { "loc": [545, 470], "name": "round_cactus_s" },
+      { "loc": [570, 474], "name": "tree_cactus_l" }
+    ]
+  },
+
+  "after_spawn": {
+    "image": [0, 640, 640, 640],
+    "progression": [true, false, true, true],
+    "next_levels": ["naf", null, "spawn", "waf"],
+    "enemies": [[[300, 100], "cobra"]],
+    "elements": [],
+    "spawn_point": [[100, 530], [50, 225], [310, 70], []],
+    "bounding_boxes": [
+      { "loc": [28, 620], "name": "tree_cactus_l" },
+      { "loc": [135, 470], "name": "round_cactus_s" },
+      { "loc": [530, 388], "name": "tree_cactus_s" },
+      { "loc": [435, 228], "name": "tree_cactus_s" },
+      { "loc": [155, 174], "name": "tree_cactus_l" },
+      { "loc": [50, 182], "name": "round_cactus_s" },
+      { "loc": [465, 98], "name": "tree_cactus_s" }
+    ]
+  },
+  "waf": {
+    "image": [0, 1280, 640, 640],
+    "progression": [false, true, false, false],
+    "next_levels": [null, "after_spawn", null, null],
+    "enemies": [
+      [[400, 550], "cobra"],
+      [[304, 128], "mini-golem"]
+    ],
+    "elements": [[[64, 48], "key"]],
+    "spawn_point": [[], [], [], [500, 200]],
+    "bounding_boxes": [
+      { "loc": [512, 86], "name": "round_cactus_l" },
+      { "loc": [176, 551], "name": "round_cactus_l" },
+      { "loc": [128, 440], "name": "tree_cactus_s" },
+      { "loc": [64, 230], "name": "tree_cactus_s" },
+      { "loc": [16, 620], "name": "tree_cactus_s" }
+    ]
+  },
+  "naf": {
+    "image": [0, 1920, 640, 640],
+    "progression": [true, false, true, false],
+    "next_levels": ["before_merchant", null, "after_spawn", null],
+    "enemies": [[[64, 192], "mini-golem"]],
+    "elements": [[[550, 315], "normal_chest"]],
+    "spawn_point": [[360, 530], [], [200, 50], []],
+    "bounding_boxes": [
+      { "loc": [592, 150], "name": "round_cactus_s" },
+      { "loc": [542, 232], "name": "round_cactus_s" },
+      { "loc": [494, 312], "name": "round_cactus_s" },
+      { "loc": [448, 373], "name": "round_cactus_s" },
+      { "loc": [310, 192], "name": "tree_cactus_l" },
+      { "loc": [110, 163], "name": "tree_cactus_s" },
+      { "loc": [190, 404], "name": "tree_cactus_s" }
+    ]
+  },
+  "before_merchant": {
+    "image": [640, 1280, 640, 640],
+    "progression": [true, true, true, false],
+    "next_levels": ["finale", "merchant", "naf", null],
+    "enemies": [
+      [[64, 192], "worm"],
+      [[96, 320], "cobra"]
+    ],
+    "elements": [],
+    "spawn_point": [[360, 530], [], [], [500, 530]],
+    "bounding_boxes": [
+      { "loc": [336, 240], "name": "round_cactus_l" },
+      { "loc": [144, 240], "name": "tree_cactus_s" },
+      { "loc": [336, 416], "name": "tree_cactus_s" },
+      { "loc": [128, 592], "name": "tree_cactus_s" }
+    ]
+  },
+  "merchant": {
+    "image": [640, 1920, 640, 640],
+    "progression": [false, false, false, true],
+    "next_levels": [null, null, null, "before_merchant"],
+    "enemies": [],
+    "elements": [
+      [[544, 480], "locked_chest"],
+      [[384, 280], "merchant"]
+    ],
+    "spawn_point": [[], [32, 272], [], []],
+    "bounding_boxes": [
+      { "loc": [512, 608], "name": "round_cactus_s" },
+      { "loc": [592, 208], "name": "round_cactus_s" },
+      { "loc": [320, 592], "name": "round_cactus_l" },
+      { "loc": [304, 64], "name": "tree_cactus_s" },
+      { "loc": [160, 528], "name": "tree_cactus_l" }
+    ]
+  },
+  "finale": {
+    "image": [1280, 1280, 640, 640],
+    "progression": [false, false, false, false],
+    "next_levels": [null, null, null, null],
+    "enemies": [[[260, 80], "BULL"]],
+    "elements": [],
+    "spawn_point": [[296, 520], [], [], []],
+    "bounding_boxes": [
+      { "loc": [16, 240], "name": "tree_cactus_l" },
+      { "loc": [560, 240], "name": "tree_cactus_l" },
+      { "loc": [480, 160], "name": "tree_cactus_l" },
+      { "loc": [96, 160], "name": "tree_cactus_l" },
+      { "loc": [176, 80], "name": "tree_cactus_l" },
+      { "loc": [400, 80], "name": "tree_cactus_l" }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "warrior": {
+    "idle": [0, [6, 0.7, true]],
+    "move": [80, [7, 0.5, true, "./static/sound/character-step.wav"]],
+    "dodge": [160, [7, 0.5, false]],
+    "attack": [240, [7, 0.4, false, "./static/sound/sword-swing.wav"]],
+    "death": [320, [9, 1, false]]
+  },
+  "mage": {
+    "idle": [0, [6, 1, true]],
+    "move": [160, [8, 0.45, true, "./static/sound/character-step.wav"]],
+    "teleport": [240, [6, 1, false, "./static/sound/teleport.wav"]],
+    "attack": [80, [8, 0.95, false, "./static/sound/magic_blast.wav"]],
+    "death": [320, [7, 1.2, false]]
+  },
+  "archer": {
+    "idle": [0, [2, 0.65, true]],
+    "move": [80, [8, 0.55, true, "./static/sound/character-step.wav"]],
+    "dodge": [160, [7, 0.8, false]],
+    "attack": [240, [11, 0.92, false, "./static/sound/bow_shot.wav"]],
+    "death": [320, [10, 0.8, false]]
+  },
+  "cobra": {
+    "idle": [0, [16, 1.2, true]],
+    "move": [64, [8, 0.8, true]],
+    "attack": [128, [9, 0.95, false, "./static/sound/snake-attack.wav"]],
+    "death": [192, [6, 1, false]]
+  },
+  "mini-golem": {
+    "idle": [0, [5, 1.2, true]],
+    "move": [64, [8, 0.8, true]],
+    "attack": [128, [7, 0.95, false, "./static/sound/golem-attack.wav"]],
+    "death": [192, [5, 1, false]]
+  },
+  "BULL": {
+    "idle": [0, [5, 0.8, true]],
+    "move": [224, [5, 0.6, true]],
+    "attack": [112, [9, 1.6, false, "./static/sound/bull-attack.wav"]],
+    "buff": [352, [6, 1, false, "./static/sound/bull-buff.wav"]],
+    "death": [480, [6, 1, false]]
+  },
+  "worm": {
+    "idle": [0, [8, 1.5, true]],
+    "death": [64, [6, 1.4, false]]
+  },
+  "normal_chest": {
+    "default": [0, [1, 0, true]],
+    "opened": [64, [1, 0, true, "./static/sound/chest_open.wav"]]
+  },
+  "locked_chest": {
+    "default": [0, [1, 0, true]],
+    "opened": [64, [1, 0, true, "./static/sound/chest_open.wav"]]
+  },
+  "merchant": {
+    "default": [0, [5, 1.8, true]],
+    "not_selling": [64, [4, 1.2, true]]
+  }
+}

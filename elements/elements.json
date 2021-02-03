@@ -1,0 +1,74 @@
+{
+  "shiny_coin": {
+    "image": [2592, 80, 64, 64],
+    "anim": [6, 0.7, true],
+    "centroid": [32, 48],
+    "delimiter": 64,
+    "amount": 8,
+    "type": "coin"
+  },
+  "coin": {
+    "image": [2592, 0, 64, 64],
+    "anim": [6, 0.7, true],
+    "centroid": [32, 48],
+    "delimiter": 64,
+    "amount": 2,
+    "type": "coin"
+  },
+  "key": {
+    "image": [2560, 128, 64, 64],
+    "anim": [1, 0, true],
+    "centroid": [48, 64],
+    "delimiter": 0,
+    "amount": 1,
+    "type": "key"
+  },
+  "normal_chest": {
+    "image": [2640, 128, 64, 64],
+    "anim": [1, 0, true],
+    "centroid": [48, 64],
+    "delimiter": 0,
+    "amount": 12,
+    "type": "normal_chest"
+  },
+  "locked_chest": {
+    "image": [2704, 128, 64, 64],
+    "anim": [1, 0, true],
+    "centroid": [48, 64],
+    "delimiter": 0,
+    "amount": 20,
+    "type": "locked_chest"
+  },
+  "merchant": {
+    "image": [2576, 256, 64, 64],
+    "anim": [5, 1.8, true],
+    "centroid": [32, 64],
+    "delimiter": 64,
+    "amount": 8,
+    "type": "merchant"
+  },
+  "arrow": {
+    "image": [928, 832, 32, 2],
+    "anim": [1, 0, true],
+    "centroid": [0, 32],
+    "delimiter": 0,
+    "amount": 0,
+    "type": "arrow"
+  },
+  "poison": {
+    "image": [992, 832, 48, 16],
+    "anim": [3, 0.6, true],
+    "centroid": [48, 16],
+    "delimiter": 48,
+    "amount": 10,
+    "type": "poison"
+  },
+  "Water": {
+    "image": [0, 2560, 48, 16],
+    "anim": [5, 5, false],
+    "centroid": [0, 0],
+    "delimiter": 576,
+    "amount": 0,
+    "type": "Water"
+  }
+}

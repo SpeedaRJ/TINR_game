@@ -1,0 +1,105 @@
+{
+  "characters": {
+    "warrior": {
+      "image": [640, 0, 128, 80],
+      "centroid": [32, 45],
+      "animation": [6, 0.7, true],
+      "state": "idle",
+      "hp": 150,
+      "max_hp": 150,
+      "mana": 60,
+      "damage": 25,
+      "speed": 4,
+      "range": 70,
+      "direction": false,
+      "delimiter": 128
+    },
+    "mage": {
+      "image": [640, 400, 128, 80],
+      "centroid": [32, 45],
+      "animation": [6, 1, true],
+      "state": "idle",
+      "hp": 85,
+      "max_hp": 85,
+      "mana": 120,
+      "damage": 35,
+      "speed": 3.8,
+      "range": 140,
+      "direction": false,
+      "delimiter": 128
+    },
+    "archer": {
+      "image": [640, 800, 128, 80],
+      "centroid": [32, 45],
+      "animation": [2, 0.4, true],
+      "state": "idle",
+      "hp": 100,
+      "max_hp": 100,
+      "mana": 30,
+      "damage": 18,
+      "speed": 4.2,
+      "range": 0,
+      "direction": false,
+      "delimiter": 128
+    }
+  },
+
+  "enemies": {
+    "cobra": {
+      "image": [1536, 0, 64, 64],
+      "centroid": [6, 44],
+      "animation": [16, 1.2, true],
+      "state": "idle",
+      "hp": 55,
+      "damage": 15,
+      "speed": 2.6,
+      "range": 55,
+      "direction": false,
+      "delimiter": 64,
+      "drop_chance": 0.6,
+      "move": "dirct"
+    },
+    "mini-golem": {
+      "image": [1792, 288, 64, 64],
+      "centroid": [16, 32],
+      "animation": [5, 1.2, true],
+      "state": "idle",
+      "hp": 100,
+      "damage": 25,
+      "speed": 2,
+      "range": 60,
+      "direction": false,
+      "delimiter": 64,
+      "drop_chance": 0.8,
+      "move": "a1"
+    },
+    "worm": {
+      "image": [1792, 528, 64, 64],
+      "centroid": [12, 32],
+      "animation": [8, 1.5, true],
+      "state": "idle",
+      "hp": 30,
+      "damage": 10,
+      "speed": 1,
+      "range": 0,
+      "direction": false,
+      "delimiter": 64,
+      "drop_chance": 0.3,
+      "move": "random"
+    },
+    "BULL": {
+      "image": [1280, 1920, 144, 112],
+      "centroid": [16, 64],
+      "animation": [5, 0.8, true],
+      "state": "idle",
+      "hp": 200,
+      "damage": 32,
+      "speed": 10,
+      "range": 135,
+      "direction": false,
+      "delimiter": 144,
+      "drop_chance": 0,
+      "move": "a1"
+    }
+  }
+}
