@@ -35,8 +35,7 @@ class PyGame(object):
         self.JSONs = JSON_base(
             "./elements/levels.json", "./elements/states.json", "./elements/entities.json", "./elements/bbs.json", "./elements/elements.json", "./elements/ui.json", "save.json")
         self.level = self.JSONs.getLevelFromJSON("spawn", self.SpriteSheet)
-        self.completed_levels = []
-        self.where_player_moved = []
+        
         self.user_selection = "mage"
         self.player = self.JSONs.getPlayerFromJSON(
             self.user_selection, self.level.spawn_point[3])
@@ -99,7 +98,10 @@ class PyGame(object):
 
             pygame.display.update()
             self.clock.tick(self.fps)
-
+        
+        self.level = self.JSONs.getLevelFromJSON("spawn", self.SpriteSheet)
+        self.completed_levels = []
+        self.where_player_moved = []
         if self.JSONs.save["status"]:
             self.load_from_save()
             self.screen.fill(pygame.Color("black"))
@@ -344,6 +346,12 @@ class PyGame(object):
                         self.quit_with_saving()
 
                     elif button == 3:
+                        self.ad.switchAudio('./static/sound/menu_music.wav')
+                        data = {"status": False, "health": 0, "max_hp": 0, "mvs": 0, "dmg": 0,
+                                "coins": 0, "keys": 0, "travel": [], "completed": [], "selection": "warrior",
+                                "upgrades": [], "music": self.music_volume_multiplier, "sfx": self.sfx_volume_multiplier, "master": self.master_volume_multiplier}
+                        with open('save.json', 'w') as fp:
+                            json.dump(data, fp)
                         self.pre_run()
 
             pygame.display.update()
@@ -597,6 +605,10 @@ class PyGame(object):
                             self.JSONs, asset.location, self.user_selection)
                         self.ad.setAssetChannels(
                             self.level.assets, self.base_sfx_volume * self.master_volume_multiplier * self.sfx_volume_multiplier)
+
+                    elif not any([x.aType.current != "death" for x in self.level.assets if isinstance(x.aType, Enemy)]):
+                        if self.level.name not in self.completed_levels and self.level.name != "merchant":
+                            self.completed_levels.append(self.level.name)
 
                 elif isinstance(asset.aType, Enemy) and self.player.is_alive:
                     enemy_to_player_dist = 10000
